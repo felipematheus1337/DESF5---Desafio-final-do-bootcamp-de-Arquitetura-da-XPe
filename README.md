@@ -64,7 +64,7 @@ O *read/write* propriamente dito é concedido pelo `GRANT` do PostgreSQL ao usu�
 
 ## Provisionamento na AWS (prática)
 
-A infraestrutura foi **efetivamente provisionada** no Console AWS (região `sa-east-1`) e documentada passo a passo, com capturas de tela em [`docs/prints/`](docs/prints/). Ordem de criação (cada recurso depende do anterior já existir):
+A infraestrutura foi **efetivamente provisionada** no Console AWS (região `sa-east-1`) e documentada passo a passo, com capturas de telas nas pastas. Ordem de criação (cada recurso depende do anterior já existir):
 
 1. **Rede** — VPC `ecommerce-vpc` (10.0.0.0/16) via *VPC and more*: 2 AZs, subnets públicas e privadas, Internet Gateway, NAT Gateway e route tables. Subnets dedicadas de banco (`ecommerce-db-subnet-az-a/-b`).
 2. **Security Groups** — `SG-ALB` (80/443 da internet), `SG-APP` (8080 a partir do SG-ALB), `SG-DB` (5432 a partir do SG-APP).
